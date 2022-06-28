@@ -1,0 +1,21 @@
+name: Deploy
+permissions:
+  contents: write
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: |
+          docker buildx build -t tbaile/tbaile.github.io:dist --load .
+          docker run --rm --name dist_extraction -d tbaile/tbaile.github.io:dist tail -f /dev/null
+          docker cp dist_extraction:/app/dist ./dist
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist

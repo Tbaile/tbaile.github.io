@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper {
+    @apply flex items-center justify-center h-screen;
+}
+
+.box {
+    @apply text-center border-2 rounded mx-3 py-2 px-4 sm:px-8 flex-grow sm:flex-grow-0;
+}
+
+.button {
+    @apply px-4 py-2 font-semibold text-sm bg-cyan-500 text-white rounded-full shadow-sm;
+}
