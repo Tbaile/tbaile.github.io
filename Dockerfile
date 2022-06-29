@@ -11,6 +11,7 @@ COPY . .
 COPY --from=modules /app/node_modules /app/node_modules
 RUN npm run build
 
-FROM busybox as dist
+FROM nginx:1.23.0-alpine
 WORKDIR /app
-COPY --from=build /app/dist /app/dist
+COPY nginx /etc/nginx
+COPY --from=build /app/dist /app
