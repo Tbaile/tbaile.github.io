@@ -9,6 +9,9 @@
   "minor": {
     "automerge": true
   },
+  "patch": {
+    "automerge": true
+  },
   "packageRules": [
     {
       "matchPackageNames": [
