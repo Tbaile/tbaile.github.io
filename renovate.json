@@ -6,6 +6,9 @@
   "schedule": [
     "every weekend"
   ],
+  "reviewers": [
+    "Tbaile"
+  ],
   "minor": {
     "automerge": true
   },
