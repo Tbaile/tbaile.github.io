@@ -11,7 +11,7 @@ COPY . .
 COPY --from=modules /app/node_modules /app/node_modules
 RUN npm run build
 
-FROM nginx:1.23.0-alpine
+FROM nginx:1.23.1-alpine
 WORKDIR /app
 COPY nginx /etc/nginx
 COPY --from=build /app/dist /app
