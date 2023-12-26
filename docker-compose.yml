@@ -1,10 +1,8 @@
 services:
   dev:
-    image: node:20
-    working_dir: /app
-    command: sh -c "npm install && npm run dev"
-    stop_signal: SIGKILL
+    build:
+      target: dev
     volumes:
       - .:/app
     ports:
-      - "5137:5137"
+      - "5173:5173"
