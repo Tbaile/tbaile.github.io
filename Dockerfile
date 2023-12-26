@@ -17,6 +17,8 @@ COPY public public
 COPY src src
 COPY env.d.ts .
 COPY index.html .
+COPY postcss.config.js .
+COPY tailwind.config.ts .
 COPY tsconfig.app.json .
 COPY tsconfig.json .
 COPY tsconfig.node.json .
