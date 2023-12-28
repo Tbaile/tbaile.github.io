@@ -1,10 +1,13 @@
 @tailwind base;
 @tailwind components;
-
-@layer components {
-    .h1 {
-        @apply text-2xl font-bold
-    }
-}
-
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200;
+  }
+
+  svg {
+    @apply fill-gray-900 dark:fill-gray-200;
+  }
+}

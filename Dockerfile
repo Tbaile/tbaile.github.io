@@ -13,7 +13,6 @@ FROM base as build
 COPY package.json .
 COPY package-lock.json .
 RUN npm ci
-COPY public public
 COPY src src
 COPY env.d.ts .
 COPY index.html .
