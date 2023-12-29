@@ -1,0 +1,15 @@
+name: Renovate
+
+on:
+  push:
+    branches:
+      - renovate/*
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+
+  build:
+    needs:
+      - test
+    uses: ./.github/workflows/build.yml
